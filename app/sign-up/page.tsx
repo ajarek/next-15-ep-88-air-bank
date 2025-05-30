@@ -1,16 +1,17 @@
 import Container from '@/components/Container'
 import NavigationBar from '@/components/NavigationBar'
-import SignIn from '@/components/SignIn'
+import SignUpForm from '@/components/SignUp'
 
-export default function Home() {
+const SignUp = () => {
   return (
     <div>
-    
-     <NavigationBar label='Sign In'/>
+      <NavigationBar label='Sign Up'/>
      <Container>
-      <SignIn/>
+      <SignUpForm/>
+      
      </Container>
-
     </div>
   )
 }
+
+export default SignUp
