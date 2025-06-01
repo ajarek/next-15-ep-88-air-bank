@@ -50,8 +50,6 @@ const SignIn = () => {
   }
   return (
     <div className='w-full flex flex-col items-center justify-center gap-6 p-6'>
-      {' '}
-      i zod
       <div className='w-full flex flex-col items-start'>
         <h1 className='text-3xl font-bold text-primary'>Welcome Back</h1>
         <p>Hello there, sign in to continue</p>

@@ -5,6 +5,8 @@ import Image from 'next/image'
 import { Bell } from 'lucide-react'
 import Container from '@/components/Container'
 import LogoutBtn from '@/components/LogoutBtn'
+import CreditCard from '@/components/CreditCard'
+import ActionGrid from '@/components/ActionGrid'
 
 const Dashboard = async () => {
   const session = await auth()
@@ -33,8 +35,12 @@ const Dashboard = async () => {
         <LogoutBtn/>
       </div>
       <Container>
-        <h1 className='m-4'>Dashboard</h1>
+        <div className='w-full flex items-center justify-center py-4 pr-4'>
+        <CreditCard nameUser={session?.user?.name || ''} />
+        </div>
+         <ActionGrid/>
       </Container>
+     
     </div>
   )
 }

@@ -2,15 +2,20 @@ import { signOut, auth } from '@/app/api/auth/auth'
 import { Button } from './ui/button'
 import Link from 'next/link'
 import Image from 'next/image'
+import { redirect } from 'next/navigation'
 
 const Signout = async () => {
   const session = await auth()
+  if(!session){
+     redirect('/')
+  }
   const userImage = session?.user?.image
   return (
     <form
       action={async () => {
         'use server'
         await signOut()
+        
       }}
       className='p-4  flex flex-col items-center rounded-lg border-2 shadow-xl gap-4 min-w-[300px]'
     >
