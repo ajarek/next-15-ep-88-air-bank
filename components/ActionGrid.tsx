@@ -23,7 +23,7 @@ export default function ActionGrid() {
         <Link href='/' key={idx}>
         <Card
           
-          className="flex flex-col items-center justify-start  rounded-xl shadow-md hover:shadow-lg transition-shadow  h-34"
+          className="flex flex-col items-center justify-start  rounded-xl shadow-xl hover:border-2 transition-all border border-primary h-26 w-26 p-1 "
         >
           {action.icon}
           <span className="text-sm  text-gray-800 text-center">{action.label}</span>

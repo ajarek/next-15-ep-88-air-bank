@@ -7,6 +7,7 @@ import Container from '@/components/Container'
 import LogoutBtn from '@/components/LogoutBtn'
 import CreditCard from '@/components/CreditCard'
 import ActionGrid from '@/components/ActionGrid'
+import FooterNavigation from '@/components/FooterNavigation'
 
 const Dashboard = async () => {
   const session = await auth()
@@ -39,8 +40,8 @@ const Dashboard = async () => {
         <CreditCard nameUser={session?.user?.name || ''} />
         </div>
          <ActionGrid/>
+         <FooterNavigation/>
       </Container>
-     
     </div>
   )
 }
