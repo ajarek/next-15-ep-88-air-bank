@@ -1,6 +1,8 @@
 import Container from '@/components/Container'
 import FooterNavigation from '@/components/FooterNavigation'
 import NavigationBar from '@/components/NavigationBar'
+import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 const searchItems = [
     {
@@ -29,11 +31,28 @@ const searchItems = [
     },
     
   ]
+  
 const Search = () => {
   return (
     <div>
        <NavigationBar label='Search'/>
      <Container>
+      <div className=' flex flex-col items-start justify-center gap-4 p-6'>
+        {searchItems.map((item)=>{
+          return(
+            
+              <Link key={item.id} href={item.href} className='w-full flex items-center justify-between border border-primary px-2 py-4 rounded-sm shadow-xl'>
+                <div>
+                  <h1 className='text-xl font-semibold'>{item.label}</h1>
+                  <p>Search for {item.label}</p>
+                  </div>          
+                  <Image src={item.img} alt={item.label} width={120} height={85}/>
+              </Link>
+          )
+        })}
+
+
+      </div>
       <FooterNavigation/>
      </Container>
     </div>

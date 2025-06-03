@@ -28,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="w-[375px]  container mx-auto border-2  shadow-lg rounded-xl ">
+        <div className="w-[375px]  container mx-auto border-2  shadow-lg rounded-xl   ">
       <Phone/>
         {children}
         </div>
