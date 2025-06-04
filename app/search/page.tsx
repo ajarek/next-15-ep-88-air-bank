@@ -41,7 +41,7 @@ const Search = () => {
         {searchItems.map((item)=>{
           return(
             
-              <Link key={item.id} href={item.href} className='w-full flex items-center justify-between border border-primary px-2 py-4 rounded-sm shadow-xl'>
+              <Link key={item.id} href={item.href} className='w-full flex items-center justify-between border border-primary px-2 py-4 rounded-sm shadow-xl hover:bg-primary hover:text-white transition-transform duration-200'>
                 <div>
                   <h1 className='text-xl font-semibold'>{item.label}</h1>
                   <p>Search for {item.label}</p>
