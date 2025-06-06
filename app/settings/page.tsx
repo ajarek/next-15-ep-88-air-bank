@@ -1,5 +1,6 @@
 import Container from '@/components/Container'
 import FooterNavigation from '@/components/FooterNavigation'
+import { ModeToggle } from '@/components/ModeToggle'
 import NavigationBar from '@/components/NavigationBar'
 import { ChevronRight } from 'lucide-react'
 import Link from 'next/link'
@@ -38,7 +39,11 @@ const Settings = () => {
     <div>
       <NavigationBar label='Setting' />
       <Container>
-        <div className=' flex flex-col items-start justify-center gap-4 p-6'>
+        <div className=' flex flex-col items-start justify-center gap-4 p-4'>
+          <div className='w-full flex items-center justify-between border border-primary px-2 py-4 rounded-sm shadow-xl hover:bg-primary hover:text-white transition-transform duration-200'>
+            <h1 className='text-xl font-semibold'>Theme</h1>
+            <ModeToggle/>
+          </div>
           {settingItems.map((item) => {
             return (
               <Link

@@ -36,8 +36,8 @@ const pathname = usePathname()
 
   
   return (
-    <div className=' flex items-center justify-center px-6 pb-2'>
-      <nav className='w-full flex items-center justify-center gap-4 bg-white  shadow-xl border border-gray-100 p-2 rounded-sm'>
+    <div className=' flex items-center justify-center px-4 pb-2'>
+      <nav className='w-full flex items-center justify-center gap-4 shadow-xl border border-primary p-2 rounded-lg'>
         {navigationItems.map((item) => {
           const Icon = item.icon
 

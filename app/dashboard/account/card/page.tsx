@@ -5,32 +5,36 @@ import { Card, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
 import React from 'react'
 import { auth } from '@/app/api/auth/auth'
-
+import { headers } from 'next/headers';
 
 
 const Cards = async () => {
+
+  const headersList = await headers();
+  const referer = (headersList).get('referer');
+  
   const session = await auth()
   const nameUser = session?.user?.name || ''
   return (
     <div>
-      <NavigationBar label='Account and card' />
+      <NavigationBar label='Cards' />
       <Container>
         <div className=' flex flex-col items-center justify-start p-4 gap-4'>
           <div className='flex items-center justify-center gap-4 w-full'>
             <Link
-              className='text-xl text-center text-white w-40 rounded-xl bg-gray-500 hover:bg-primary focus:bg-primary transition-all duration-200 ease-in-out  py-2 px-4'
+              className={`text-xl text-center text-white w-40 rounded-xl  bg-gray-500 hover:bg-primary focus:bg-primary transition-all duration-200 ease-in-out  py-2 px-4`}
               href='/dashboard/account'
             >
               Accounts
             </Link>
             <Link
-              className='text-xl text-center text-white w-40 rounded-xl bg-gray-500 hover:bg-primary focus:bg-primary transition-all duration-200 ease-in-out  py-2 px-4'
+              className={`text-xl text-center text-white w-40 rounded-xl ${referer === 'http://localhost:3000/dashboard/account/card' ? 'bg-primary' : ''} bg-gray-500 hover:bg-primary focus:bg-primary transition-all duration-200 ease-in-out  py-2 px-4`}
               href='/dashboard/account/card'
             >
               Cards
             </Link>
           </div>
-          <div className='relative w-[320px] h-[200px]'>
+          <div className='relative w-full h-[200px]'>
             <Card className='absolute top-0 left-0 rounded-2xl w-full h-full bg-gradient-to-r from-[#1A1266] to-[#339CFF] text-white  flex flex-col justify-between p-6 z-30 shadow-xl'>
               <CardContent className='p-0 flex flex-col justify-between h-full'>
                 <div>
@@ -49,7 +53,7 @@ const Cards = async () => {
               </CardContent>
             </Card>
           </div>
-          <div className='relative w-[320px] h-[200px]'>
+          <div className='relative w-full h-[200px]'>
             <Card className='absolute top-0 left-0 rounded-2xl w-full h-full bg-gradient-to-r from-[#f29b0e] to-[#d09c47] text-white  flex flex-col justify-between p-6 z-30 shadow-xl'>
               <CardContent className='p-0 flex flex-col justify-between h-full'>
                 <div>
@@ -68,7 +72,7 @@ const Cards = async () => {
               </CardContent>
             </Card>
           </div>
-          <div className='relative w-[320px] h-[200px]'>
+          <div className='relative w-full h-[200px]'>
             <Card className='absolute top-0 left-0 rounded-2xl w-full h-full bg-gradient-to-r from-[#737372] to-[#c0bfbe] text-black  flex flex-col justify-between p-6 z-30 shadow-xl'>
               <CardContent className='p-0 flex flex-col justify-between h-full'>
                 <div>

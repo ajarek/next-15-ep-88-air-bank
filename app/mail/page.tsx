@@ -56,7 +56,7 @@ const Search = () => {
     <div>
       <NavigationBar label='Message' />
       <Container>
-        <div className=' flex flex-col items-start justify-center gap-4 p-6'>
+        <div className=' flex flex-col items-start justify-center gap-4 p-4'>
           {mailItems.map((item) => {
             const Icon = item.icon
             return (

@@ -26,7 +26,7 @@ export default function ActionGrid() {
           className="flex flex-col items-center justify-start  rounded-xl shadow-xl hover:border-2 transition-all border border-primary h-26 w-26 p-1 "
         >
           {action.icon}
-          <span className="text-sm  text-gray-800 text-center">{action.label}</span>
+          <span className="text-sm   text-center">{action.label}</span>
         </Card>
         </Link>
       ))}
