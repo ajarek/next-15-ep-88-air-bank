@@ -3,7 +3,7 @@ import React from 'react'
 import { Input } from './ui/input'
 import Link from 'next/link'
 import { Button } from './ui/button'
-import { Fingerprint } from 'lucide-react'
+
 
 const SignUpForm = () => {
   return (
@@ -50,7 +50,7 @@ const SignUpForm = () => {
             className='transform scale-150 '
             
           />
-          <p>By creating an account your aggree to our <span className='text-primary font-semibold'>Term and Condtions</span> </p>
+          <p>By creating an account you agree to our <span className='text-primary font-semibold'>Term and Conditions</span> </p>
         </div>
         <Button type='submit'>Sign up</Button>
       </form>

@@ -28,7 +28,7 @@ const Cards = async () => {
               Accounts
             </Link>
             <Link
-              className={`text-xl text-center text-white w-40 rounded-xl ${referer === 'http://localhost:3000/dashboard/account/card' ? 'bg-primary' : ''} bg-gray-500 hover:bg-primary focus:bg-primary transition-all duration-200 ease-in-out  py-2 px-4`}
+              className={`text-xl text-center text-white w-40 rounded-xl ${referer == 'http://localhost:3000/dashboard/account/card' ? 'bg-primary' : 'bg-gray-500'}  hover:bg-primary focus:bg-primary transition-all duration-200 ease-in-out  py-2 px-4`}
               href='/dashboard/account/card'
             >
               Cards
