@@ -7,7 +7,7 @@ import Link from "next/link"
 const actions = [
   { link:'/dashboard/account', icon: <Wallet className="text-indigo-700 w-6 h-6" />, label: "Account and Card" },
   { link:'/dashboard/transfer', icon: <Repeat2 className="text-pink-500 w-6 h-6" />, label: "Transfer" },
-  { link:'/dashboard/account', icon: <ArrowDownToLine className="text-blue-500 w-6 h-6" />, label: "Withdraw" },
+  { link:'/dashboard/withdraw', icon: <ArrowDownToLine className="text-blue-500 w-6 h-6" />, label: "Withdraw" },
   { link:'/dashboard/account', icon: <Smartphone className="text-yellow-500 w-6 h-6" />, label: "Mobile prepaid" },
   { link:'/dashboard/account', icon: <Banknote className="text-emerald-500 w-6 h-6" />, label: "Pay the bill" },
   { link:'/dashboard/account', icon: <PiggyBank className="text-indigo-500 w-6 h-6" />, label: "Save online" },
