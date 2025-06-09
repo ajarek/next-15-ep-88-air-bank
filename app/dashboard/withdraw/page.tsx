@@ -10,9 +10,9 @@ import {
 } from '@/components/ui/select'
 import React from 'react'
 import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
+import AmountSelector from '@/components/AmountSelector'
 
 const Withdraw = () => {
   return (
@@ -46,23 +46,15 @@ const Withdraw = () => {
             required
           />
          
-           <h1>Choose Amount</h1>
-           <div className='grid grid-cols-3 gap-4'>
-            <Input className='w-16 h-16 text-center border border-primary p-2 rounded-lg' type='button' value='100'/>
-            <Input className='w-16 h-16 text-center border border-primary p-2 rounded-lg' type='button' value='200'/>
-            <Input className='w-16 h-16 text-center border border-primary p-2 rounded-lg' type='button' value='300'/>
-            <Input className='w-16 h-16 text-center border border-primary p-2 rounded-lg' type='button' value='400'/>
-            <Input className='w-16 h-16 text-center border border-primary p-2 rounded-lg' type='button' value='500'/>
-            <Input className='w-16 h-16 text-center border border-primary p-2 rounded-lg placeholder:text-foreground' type='text' placeholder='Other'/>
-
-           </div>
-        </div>
+          
+           <AmountSelector/>
           <Button
               type='submit'
               className='w-full'
             >
               Confirm
             </Button>
+        </div>
         </form>
 
         <FooterNavigation />
