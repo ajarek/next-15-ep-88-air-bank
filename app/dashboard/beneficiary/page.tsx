@@ -2,7 +2,6 @@ import Container from '@/components/Container'
 import FooterNavigation from '@/components/FooterNavigation'
 import NavigationBar from '@/components/NavigationBar'
 import { Card, CardContent } from '@/components/ui/card'
-import { ArrowUpDown, Droplet, FolderSync, Plug, Receipt } from 'lucide-react'
 import Image from 'next/image'
 
 const bills = [
