@@ -6,8 +6,8 @@ import { redirect } from 'next/navigation'
 
 const Signout = async () => {
   const session = await auth()
-  if(!session){
-     redirect('/')
+  if (!session) {
+    redirect('/')
   }
   const userImage = session?.user?.image
   return (
@@ -15,7 +15,6 @@ const Signout = async () => {
       action={async () => {
         'use server'
         await signOut()
-        
       }}
       className='p-4  flex flex-col items-center rounded-lg border-2 shadow-xl gap-4 min-w-[300px]'
     >

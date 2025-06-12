@@ -27,34 +27,33 @@ const Withdraw = () => {
             height={188}
           />
         </div>
-        <form action="">
-        <div className=' flex flex-col items-center justify-start p-4 gap-4'>
-          <Select required>
-            <SelectTrigger className='w-full border border-primary '>
-              <SelectValue placeholder='Choose account/card' />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value='account1'>Account 1</SelectItem>
-              <SelectItem value='account2'>Account 2</SelectItem>
-              <SelectItem value='account3'>Account 3</SelectItem>
-            </SelectContent>
-          </Select>
-          <Input
-            type='text'
-            placeholder='Phone number'
-            className='w-full border border-primary p-2 rounded-lg'
-            required
-          />
-         
-          
-           <AmountSelector/>
-          <Button
+        <form action=''>
+          <div className=' flex flex-col items-center justify-start p-4 gap-4'>
+            <Select required>
+              <SelectTrigger className='w-full border border-primary '>
+                <SelectValue placeholder='Choose account/card' />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value='account1'>Account 1</SelectItem>
+                <SelectItem value='account2'>Account 2</SelectItem>
+                <SelectItem value='account3'>Account 3</SelectItem>
+              </SelectContent>
+            </Select>
+            <Input
+              type='text'
+              placeholder='Phone number'
+              className='w-full border border-primary p-2 rounded-lg'
+              required
+            />
+
+            <AmountSelector />
+            <Button
               type='submit'
               className='w-full'
             >
               Confirm
             </Button>
-        </div>
+          </div>
         </form>
 
         <FooterNavigation />

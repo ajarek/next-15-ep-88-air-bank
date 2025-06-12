@@ -4,7 +4,6 @@ import { Input } from './ui/input'
 import Link from 'next/link'
 import { Button } from './ui/button'
 
-
 const SignUpForm = () => {
   return (
     <div className='w-full flex flex-col items-center justify-center gap-6 p-6'>
@@ -48,15 +47,19 @@ const SignUpForm = () => {
             name='checkbox'
             id='checkbox'
             className='transform scale-150 '
-            
           />
-          <p>By creating an account you agree to our <span className='text-primary font-semibold'>Term and Conditions</span> </p>
+          <p>
+            By creating an account you agree to our{' '}
+            <span className='text-primary font-semibold'>
+              Term and Conditions
+            </span>{' '}
+          </p>
         </div>
         <Button type='submit'>Sign up</Button>
       </form>
       <div className='w-full flex flex-col items-center '>
         <p>
-         Have an account? {' '}
+          Have an account?{' '}
           <Link
             className='text-primary font-semibold'
             href='/'

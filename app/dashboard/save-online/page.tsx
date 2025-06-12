@@ -15,9 +15,7 @@ const bills = [
     description: 'Manage your save online account',
     image: '/images/group491.png',
   },
-  
 ]
-
 
 const SaveOnline = async () => {
   return (
@@ -43,11 +41,9 @@ const SaveOnline = async () => {
                     height={78}
                   />
                 </CardContent>
-                
               </Card>
             )
           })}
-
         </div>
         <FooterNavigation />
       </Container>

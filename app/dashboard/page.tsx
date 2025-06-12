@@ -9,8 +9,6 @@ import CreditCard from '@/components/CreditCard'
 import ActionGrid from '@/components/ActionGrid'
 import FooterNavigation from '@/components/FooterNavigation'
 
-
-
 const Dashboard = async () => {
   const session = await auth()
   if (!session) {
@@ -35,14 +33,14 @@ const Dashboard = async () => {
             3
           </div>
         </div>
-        <LogoutBtn/>
+        <LogoutBtn />
       </div>
       <Container>
         <div className='w-full flex items-center justify-center py-4 pr-4'>
-        <CreditCard nameUser={session?.user?.name || ''} />
+          <CreditCard nameUser={session?.user?.name || ''} />
         </div>
-         <ActionGrid/>
-         <FooterNavigation/>
+        <ActionGrid />
+        <FooterNavigation />
       </Container>
     </div>
   )

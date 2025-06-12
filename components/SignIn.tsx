@@ -71,23 +71,22 @@ const SignIn = () => {
             type='email'
             id='email'
             placeholder='Email'
-             {...register('email')}
+            {...register('email')}
           />
           {errors.email && (
-          <p className='text-red-500 text-sm'>{errors.email.message}</p>
-        )}
+            <p className='text-red-500 text-sm'>{errors.email.message}</p>
+          )}
         </div>
         <div>
           <Input
             type='password'
-            
             id='password'
             placeholder='Password'
-             {...register('password')}
+            {...register('password')}
           />
-           {errors.password && (
-          <p className='text-red-500 text-sm'>{errors.password.message}</p>
-        )}
+          {errors.password && (
+            <p className='text-red-500 text-sm'>{errors.password.message}</p>
+          )}
         </div>
         <Link
           href='/forgot-password'

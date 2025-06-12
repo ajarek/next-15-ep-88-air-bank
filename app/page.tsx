@@ -5,12 +5,10 @@ import SignIn from '@/components/SignIn'
 export default function Home() {
   return (
     <div>
-    
-     <NavigationBar label='Sign In'/>
-     <Container>
-      <SignIn/>
-     </Container>
-
+      <NavigationBar label='Sign In' />
+      <Container>
+        <SignIn />
+      </Container>
     </div>
   )
 }

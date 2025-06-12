@@ -5,11 +5,10 @@ import SignUpForm from '@/components/SignUp'
 const SignUp = () => {
   return (
     <div>
-      <NavigationBar label='Sign Up'/>
-     <Container>
-      <SignUpForm/>
-      
-     </Container>
+      <NavigationBar label='Sign Up' />
+      <Container>
+        <SignUpForm />
+      </Container>
     </div>
   )
 }

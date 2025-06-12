@@ -31,7 +31,6 @@ const bills = [
     description: 'interior',
     images: 'https://randomuser.me/api/portraits/women/24.jpg',
   },
-
 ]
 
 const Beneficiary = async () => {
@@ -47,21 +46,19 @@ const Beneficiary = async () => {
                 className='w-full flex items-center justify-between border border-primary px-2 py-4 rounded-sm shadow-xl hover:bg-primary hover:text-white transition-transform duration-200'
               >
                 <CardContent className='flex items-center justify-between w-full '>
-                  
-                    <div>
-                      <Image
-                        src={bill.images}
-                        alt={bill.name}
-                        width={60}
-                        height={60}
-                        className='rounded-full'
-                      />
-                    </div>
-                    <div>
-                      <h1 className='text-xl font-semibold'>{bill.name}</h1>
-                      <p>{bill.description}</p>
-                    </div>
-                  
+                  <div>
+                    <Image
+                      src={bill.images}
+                      alt={bill.name}
+                      width={60}
+                      height={60}
+                      className='rounded-full'
+                    />
+                  </div>
+                  <div>
+                    <h1 className='text-xl font-semibold'>{bill.name}</h1>
+                    <p>{bill.description}</p>
+                  </div>
                 </CardContent>
               </Card>
             )

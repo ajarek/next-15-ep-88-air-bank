@@ -27,7 +27,6 @@ const bills = [
   },
 ]
 
-
 const PayBill = async () => {
   return (
     <div>
@@ -52,11 +51,9 @@ const PayBill = async () => {
                     height={83}
                   />
                 </CardContent>
-                
               </Card>
             )
           })}
-
         </div>
         <FooterNavigation />
       </Container>

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import Container from '@/components/Container'
 import FooterNavigation from '@/components/FooterNavigation'
@@ -16,8 +16,6 @@ import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import AmountSelector from '@/components/AmountSelector'
 
-
-
 const MobilePrepaid = () => {
   const [isFocused1, setIsFocused1] = React.useState(false)
   const [isFocused2, setIsFocused2] = React.useState(false)
@@ -30,8 +28,16 @@ const MobilePrepaid = () => {
         <h1 className='text-center'>Find beneficiary</h1>
 
         <div className='relative w-full grid grid-cols-3 p-4 place-items-center'>
-
-          <button className={`flex flex-col items-center justify-center hover:bg-primary hover:text-white p-4 rounded-lg transition duration-200 ease-in-out ${isFocused1 ? 'bg-primary text-white' : ''}`} onClick={() => {setIsFocused1(!isFocused1); setIsFocused2(false); setIsFocused3(false)}}>
+          <button
+            className={`flex flex-col items-center justify-center hover:bg-primary hover:text-white p-4 rounded-lg transition duration-200 ease-in-out ${
+              isFocused1 ? 'bg-primary text-white' : ''
+            }`}
+            onClick={() => {
+              setIsFocused1(!isFocused1)
+              setIsFocused2(false)
+              setIsFocused3(false)
+            }}
+          >
             <Image
               src='https://randomuser.me/api/portraits/men/75.jpg'
               alt='Mobile Prepaid'
@@ -42,7 +48,16 @@ const MobilePrepaid = () => {
             <p>John</p>
           </button>
 
-          <button className={`flex flex-col items-center justify-center hover:bg-primary hover:text-white p-4 rounded-lg transition duration-200 ease-in-out ${isFocused2 ? 'bg-primary text-white' : ''}`} onClick={() => {setIsFocused2(!isFocused2); setIsFocused1(false); setIsFocused3(false)}}>
+          <button
+            className={`flex flex-col items-center justify-center hover:bg-primary hover:text-white p-4 rounded-lg transition duration-200 ease-in-out ${
+              isFocused2 ? 'bg-primary text-white' : ''
+            }`}
+            onClick={() => {
+              setIsFocused2(!isFocused2)
+              setIsFocused1(false)
+              setIsFocused3(false)
+            }}
+          >
             <Image
               src='https://randomuser.me/api/portraits/women/68.jpg'
               alt='Mobile Prepaid'
@@ -53,7 +68,16 @@ const MobilePrepaid = () => {
             <p>Emma</p>
           </button>
 
-          <button className={`flex flex-col items-center justify-center hover:bg-primary hover:text-white p-4 rounded-lg transition duration-200 ease-in-out ${isFocused3 ? 'bg-primary text-white' : ''}`} onClick={() => {setIsFocused3(!isFocused3); setIsFocused1(false); setIsFocused2(false)}}>
+          <button
+            className={`flex flex-col items-center justify-center hover:bg-primary hover:text-white p-4 rounded-lg transition duration-200 ease-in-out ${
+              isFocused3 ? 'bg-primary text-white' : ''
+            }`}
+            onClick={() => {
+              setIsFocused3(!isFocused3)
+              setIsFocused1(false)
+              setIsFocused2(false)
+            }}
+          >
             <Image
               src='https://randomuser.me/api/portraits/women/65.jpg'
               alt='Mobile Prepaid'

@@ -4,7 +4,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React from 'react'
 
-
 const FooterNavigation = () => {
   const navigationItems = [
     {
@@ -32,9 +31,8 @@ const FooterNavigation = () => {
       href: '/settings',
     },
   ]
-const pathname = usePathname()
+  const pathname = usePathname()
 
-  
   return (
     <div className=' flex items-center justify-center px-4 pb-2'>
       <nav className='w-full flex items-center justify-center gap-4 shadow-xl border border-primary p-2 rounded-lg'>

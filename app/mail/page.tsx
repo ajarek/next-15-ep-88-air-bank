@@ -65,7 +65,21 @@ const Search = () => {
                 href={item.href}
                 className='w-full flex items-center justify-between border border-primary px-2 py-4 rounded-sm shadow-xl hover:bg-primary hover:text-white transition-transform duration-200 '
               >
-                <div className={`w-12 h-12 rounded-lg flex items-center justify-center gap-2 ${item.id==='Bank of America'?'bg-blue-400':item.id==='account'?'bg-yellow-400':item.id==='alert'?'bg-red-400':item.id==='paypal'?'bg-green-400':item.id==='withdraw'?'bg-pink-400':''}`}>
+                <div
+                  className={`w-12 h-12 rounded-lg flex items-center justify-center gap-2 ${
+                    item.id === 'Bank of America'
+                      ? 'bg-blue-400'
+                      : item.id === 'account'
+                      ? 'bg-yellow-400'
+                      : item.id === 'alert'
+                      ? 'bg-red-400'
+                      : item.id === 'paypal'
+                      ? 'bg-green-400'
+                      : item.id === 'withdraw'
+                      ? 'bg-pink-400'
+                      : ''
+                  }`}
+                >
                   <Icon
                     size={24}
                     className={`transition-transform duration-200`}
@@ -74,7 +88,7 @@ const Search = () => {
 
                 <div>
                   <h1 className='text-xl font-semibold'>{item.label}</h1>
-                  <p>{item.description.slice(0,16)}...</p>
+                  <p>{item.description.slice(0, 16)}...</p>
                 </div>
               </Link>
             )

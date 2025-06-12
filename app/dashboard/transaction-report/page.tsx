@@ -3,41 +3,39 @@ import FooterNavigation from '@/components/FooterNavigation'
 import NavigationBar from '@/components/NavigationBar'
 import { Card, CardContent } from '@/components/ui/card'
 import { ArrowUpDown, Droplet, FolderSync, Plug, Receipt } from 'lucide-react'
-import Image from 'next/image'
 
 const bills = [
   {
     name: 'Water bill',
     description: 'Unsuccessfully',
-    icon: <Droplet  className="text-indigo-700 w-6 h-6" />,
-    price:'-$280'
+    icon: <Droplet className='text-indigo-700 w-6 h-6' />,
+    price: '-$280',
   },
   {
     name: 'Salary Oct',
     description: 'Income',
-    icon: <Receipt  className="text-pink-700 w-6 h-6" />,
-    price:'+$1200'
+    icon: <Receipt className='text-pink-700 w-6 h-6' />,
+    price: '+$1200',
   },
   {
     name: 'Electric bill',
     description: 'Successfully',
-    icon: <Plug className="text-sky-700 w-6 h-6" />,
-    price:'-$480'
+    icon: <Plug className='text-sky-700 w-6 h-6' />,
+    price: '-$480',
   },
   {
     name: 'Jane transfers',
     description: 'Income',
-    icon: <FolderSync className="text-yellow-400 w-6 h-6" />,
-    price:'+$500'
+    icon: <FolderSync className='text-yellow-400 w-6 h-6' />,
+    price: '+$500',
   },
   {
     name: 'Internet Bill',
     description: 'Successfully',
-    icon:<ArrowUpDown className="text-green-400 w-6 h-6" />,
-    price:'-$100'
+    icon: <ArrowUpDown className='text-green-400 w-6 h-6' />,
+    price: '-$100',
   },
 ]
-
 
 const TransactionReport = async () => {
   return (
@@ -53,24 +51,19 @@ const TransactionReport = async () => {
               >
                 <CardContent className='flex items-center justify-between w-full '>
                   <div className=' flex items-center justify-start gap-4'>
-                  <div>
-                    {bill.icon}
-                  </div>
-                  <div>
-                    <h1 className='text-xl font-semibold'>{bill.name}</h1>
-                    <p>{bill.description}</p>
-                  </div>
+                    <div>{bill.icon}</div>
+                    <div>
+                      <h1 className='text-xl font-semibold'>{bill.name}</h1>
+                      <p>{bill.description}</p>
+                    </div>
                   </div>
                   <div className='w-1/4 flex items-center justify-center'>
                     <p>{bill.price}</p>
                   </div>
-                  
                 </CardContent>
-                
               </Card>
             )
           })}
-
         </div>
         <FooterNavigation />
       </Container>
